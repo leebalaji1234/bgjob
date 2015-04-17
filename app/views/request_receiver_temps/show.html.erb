@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Params:</strong>
+  <%= @request_receiver_temp.params %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @request_receiver_temp.status %>
+</p>
+
+<%= link_to 'Edit', edit_request_receiver_temp_path(@request_receiver_temp) %> |
+<%= link_to 'Back', request_receiver_temps_path %>

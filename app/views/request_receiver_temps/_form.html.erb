@@ -1,0 +1,25 @@
+<%= form_for(@request_receiver_temp) do |f| %>
+  <% if @request_receiver_temp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@request_receiver_temp.errors.count, "error") %> prohibited this request_receiver_temp from being saved:</h2>
+
+      <ul>
+      <% @request_receiver_temp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :params %><br>
+    <%= f.text_area :params %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
