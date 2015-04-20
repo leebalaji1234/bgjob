@@ -4,7 +4,8 @@ class RequestReceiverTempsController < ApplicationController
   # GET /request_receiver_temps
   # GET /request_receiver_temps.json
   def index
-    @request_receiver_temps = RequestReceiverTemp.all
+     
+    @request_receiver_temps = RequestReceiverTemp.all 
   end
 
   # GET /request_receiver_temps/1
@@ -28,6 +29,7 @@ class RequestReceiverTempsController < ApplicationController
 
     respond_to do |format|
       if @request_receiver_temp.save
+
         format.html { redirect_to @request_receiver_temp, notice: 'Request receiver temp was successfully created.' }
         format.json { render :show, status: :created, location: @request_receiver_temp }
       else

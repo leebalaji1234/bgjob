@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'executer/start'
+
+  get 'executer/stop'
+
   resources :request_receiver_temps
   resources :basic
   # The priority is based upon order of creation: first created -> highest priority.

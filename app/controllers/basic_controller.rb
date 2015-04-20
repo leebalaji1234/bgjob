@@ -15,11 +15,11 @@ class BasicController < ActionController::Base
             @tempParams.params = params.to_s
             @tempParams.status = 0  # ready to process
             @tempParams.save
+             render :text => "Request received successfully"
       end
       private
-      def filer_params
-            objParams = {}
-            objParams['callerid'] = params[:callerid]   
+      def filer_params 
+            objParams = params.to_json   
             return objParams
       end 
 
