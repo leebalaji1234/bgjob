@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @audio_map.userid %>
+</p>
+
+<p>
+  <strong>Audioid:</strong>
+  <%= @audio_map.audioid %>
+</p>
+
+<p>
+  <strong>Guid:</strong>
+  <%= @audio_map.guid %>
+</p>
+
+<p>
+  <strong>Cliporder:</strong>
+  <%= @audio_map.cliporder %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @audio_map.status %>
+</p>
+
+<%= link_to 'Edit', edit_audio_map_path(@audio_map) %> |
+<%= link_to 'Back', audio_maps_path %>

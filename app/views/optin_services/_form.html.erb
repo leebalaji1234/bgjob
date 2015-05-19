@@ -1,0 +1,25 @@
+<%= form_for(@optin_service) do |f| %>
+  <% if @optin_service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@optin_service.errors.count, "error") %> prohibited this optin_service from being saved:</h2>
+
+      <ul>
+      <% @optin_service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

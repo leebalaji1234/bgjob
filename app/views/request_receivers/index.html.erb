@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Request Receivers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ori params</th>
+      <th>Val params</th>
+      <th>Message</th>
+      <th>Code</th>
+      <th>Guid</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @request_receivers.each do |request_receiver| %>
+      <tr>
+        <td><%= request_receiver.ori_params %></td>
+        <td><%= request_receiver.val_params %></td>
+        <td><%= request_receiver.message %></td>
+        <td><%= request_receiver.code %></td>
+        <td><%= request_receiver.guid %></td>
+        <td><%= request_receiver.status %></td>
+        <td><%= link_to 'Show', request_receiver %></td>
+        <td><%= link_to 'Edit', edit_request_receiver_path(request_receiver) %></td>
+        <td><%= link_to 'Destroy', request_receiver, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Request receiver', new_request_receiver_path %>

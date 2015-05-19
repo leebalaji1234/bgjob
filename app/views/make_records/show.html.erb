@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Guid:</strong>
+  <%= @make_record.guid %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @make_record.userid %>
+</p>
+
+<p>
+  <strong>Callerid:</strong>
+  <%= @make_record.callerid %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @make_record.source %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @make_record.destination %>
+</p>
+
+<p>
+  <strong>Templateid:</strong>
+  <%= @make_record.templateid %>
+</p>
+
+<p>
+  <strong>Dialedtime:</strong>
+  <%= @make_record.dialedtime %>
+</p>
+
+<p>
+  <strong>Answeredtime:</strong>
+  <%= @make_record.answeredtime %>
+</p>
+
+<p>
+  <strong>Endtime:</strong>
+  <%= @make_record.endtime %>
+</p>
+
+<p>
+  <strong>Dialstatus:</strong>
+  <%= @make_record.dialstatus %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @make_record.reason %>
+</p>
+
+<%= link_to 'Edit', edit_make_record_path(@make_record) %> |
+<%= link_to 'Back', make_records_path %>

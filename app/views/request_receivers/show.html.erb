@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ori params:</strong>
+  <%= @request_receiver.ori_params %>
+</p>
+
+<p>
+  <strong>Val params:</strong>
+  <%= @request_receiver.val_params %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @request_receiver.message %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @request_receiver.code %>
+</p>
+
+<p>
+  <strong>Guid:</strong>
+  <%= @request_receiver.guid %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @request_receiver.status %>
+</p>
+
+<%= link_to 'Edit', edit_request_receiver_path(@request_receiver) %> |
+<%= link_to 'Back', request_receivers_path %>

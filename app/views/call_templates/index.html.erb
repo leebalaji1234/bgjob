@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Call Templates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Desc</th>
+      <th>Flocation</th>
+      <th>Mode</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @call_templates.each do |call_template| %>
+      <tr>
+        <td><%= call_template.name %></td>
+        <td><%= call_template.desc %></td>
+        <td><%= call_template.flocation %></td>
+        <td><%= call_template.mode %></td>
+        <td><%= link_to 'Show', call_template %></td>
+        <td><%= link_to 'Edit', edit_call_template_path(call_template) %></td>
+        <td><%= link_to 'Destroy', call_template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Call template', new_call_template_path %>

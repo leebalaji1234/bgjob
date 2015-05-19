@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ori_params: MyText
+  val_params: MyText
+  message: MyText
+  code: 1
+  guid: MyText
+  status: 1
+
+two:
+  ori_params: MyText
+  val_params: MyText
+  message: MyText
+  code: 1
+  guid: MyText
+  status: 1

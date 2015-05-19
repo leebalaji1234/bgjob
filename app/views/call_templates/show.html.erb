@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @call_template.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @call_template.desc %>
+</p>
+
+<p>
+  <strong>Flocation:</strong>
+  <%= @call_template.flocation %>
+</p>
+
+<p>
+  <strong>Mode:</strong>
+  <%= @call_template.mode %>
+</p>
+
+<%= link_to 'Edit', edit_call_template_path(@call_template) %> |
+<%= link_to 'Back', call_templates_path %>

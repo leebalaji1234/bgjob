@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Audioname:</strong>
+  <%= @audio.audioname %>
+</p>
+
+<p>
+  <strong>Flocation:</strong>
+  <%= @audio.flocation %>
+</p>
+<p>
+  <strong>Size:</strong>
+  <%= @audio.fsize %>
+</p>
+<p>
+  <strong>Status:</strong>
+  <%= @audio.status %>
+</p>
+
+<%= link_to 'Edit', edit_audio_path(@audio) %> |
+<%= link_to 'Back', audios_path %>

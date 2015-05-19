@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @generator.userid %>
+</p>
+
+<p>
+  <strong>Guid:</strong>
+  <%= @generator.guid %>
+</p>
+
+<p>
+  <strong>Csvfile:</strong>
+  <%= @generator.csvfile %>
+</p>
+
+<p>
+  <strong>Csvcount:</strong>
+  <%= @generator.csvcount %>
+</p>
+
+<p>
+  <strong>Processedcount:</strong>
+  <%= @generator.processedcount %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @generator.status %>
+</p>
+
+<%= link_to 'Edit', edit_generator_path(@generator) %> |
+<%= link_to 'Back', generators_path %>

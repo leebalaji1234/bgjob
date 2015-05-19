@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Audio Maps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Userid</th>
+      <th>Audioid</th>
+      <th>Guid</th>
+      <th>Cliporder</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @audio_maps.each do |audio_map| %>
+      <tr>
+        <td><%= audio_map.userid %></td>
+        <td><%= audio_map.audioid %></td>
+        <td><%= audio_map.guid %></td>
+        <td><%= audio_map.cliporder %></td>
+        <td><%= audio_map.status %></td>
+        <td><%= link_to 'Show', audio_map %></td>
+        <td><%= link_to 'Edit', edit_audio_map_path(audio_map) %></td>
+        <td><%= link_to 'Destroy', audio_map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Audio map', new_audio_map_path %>

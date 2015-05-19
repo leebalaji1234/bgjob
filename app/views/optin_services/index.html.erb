@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Optin Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Phone</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @optin_services.each do |optin_service| %>
+      <tr>
+        <td><%= optin_service.phone %></td>
+        <td><%= optin_service.status %></td>
+        <td><%= link_to 'Show', optin_service %></td>
+        <td><%= link_to 'Edit', edit_optin_service_path(optin_service) %></td>
+        <td><%= link_to 'Destroy', optin_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Optin service', new_optin_service_path %>

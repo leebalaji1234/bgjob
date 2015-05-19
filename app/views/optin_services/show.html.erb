@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @optin_service.phone %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @optin_service.status %>
+</p>
+
+<%= link_to 'Edit', edit_optin_service_path(@optin_service) %> |
+<%= link_to 'Back', optin_services_path %>

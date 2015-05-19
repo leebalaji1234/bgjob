@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Csv Maps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Userid</th>
+      <th>Csvid</th>
+      <th>Guid</th>
+      <th>Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @csv_maps.each do |csv_map| %>
+      <tr>
+        <td><%= csv_map.userid %></td>
+        <td><%= csv_map.csvid %></td>
+        <td><%= csv_map.guid %></td>
+        <td><%= csv_map.status %></td>
+        <td><%= link_to 'Show', csv_map %></td>
+        <td><%= link_to 'Edit', edit_csv_map_path(csv_map) %></td>
+        <td><%= link_to 'Destroy', csv_map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Csv map', new_csv_map_path %>

@@ -4,7 +4,7 @@ class RequestReceiverTempsController < ApplicationController
   # GET /request_receiver_temps
   # GET /request_receiver_temps.json
   def index
-     
+        
     @request_receiver_temps = RequestReceiverTemp.all 
   end
 

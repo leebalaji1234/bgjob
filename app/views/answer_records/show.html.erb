@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Guid:</strong>
+  <%= @answer_record.guid %>
+</p>
+
+<p>
+  <strong>Userid:</strong>
+  <%= @answer_record.userid %>
+</p>
+
+<p>
+  <strong>Callerid:</strong>
+  <%= @answer_record.callerid %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @answer_record.source %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @answer_record.destination %>
+</p>
+
+<p>
+  <strong>Templateid:</strong>
+  <%= @answer_record.templateid %>
+</p>
+
+<p>
+  <strong>Dialedtime:</strong>
+  <%= @answer_record.dialedtime %>
+</p>
+
+<p>
+  <strong>Answeredtime:</strong>
+  <%= @answer_record.answeredtime %>
+</p>
+
+<p>
+  <strong>Endtime:</strong>
+  <%= @answer_record.endtime %>
+</p>
+
+<p>
+  <strong>Dialstatus:</strong>
+  <%= @answer_record.dialstatus %>
+</p>
+
+<p>
+  <strong>Reason:</strong>
+  <%= @answer_record.reason %>
+</p>
+
+<%= link_to 'Edit', edit_answer_record_path(@answer_record) %> |
+<%= link_to 'Back', answer_records_path %>

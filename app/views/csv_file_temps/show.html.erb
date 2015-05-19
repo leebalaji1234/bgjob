@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @csv_file_temp.filename %>
+</p>
+
+<p>
+  <strong>Flocation:</strong>
+  <%= @csv_file_temp.flocation %>
+</p>
+
+<p>
+  <strong>Fsize:</strong>
+  <%= @csv_file_temp.fsize %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @csv_file_temp.status %>
+</p>
+
+<%= link_to 'Edit', edit_csv_file_temp_path(@csv_file_temp) %> |
+<%= link_to 'Back', csv_file_temps_path %>

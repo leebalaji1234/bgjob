@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  audioname: MyString
+  flocation: MyText
+  fsize: 1
+  ftlocation: MyText
+  status: 1
+
+two:
+  audioname: MyString
+  flocation: MyText
+  fsize: 1
+  ftlocation: MyText
+  status: 1

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  filename: MyString
+  flocation: MyText
+  fsize: 1
+  status: 1
+
+two:
+  filename: MyString
+  flocation: MyText
+  fsize: 1
+  status: 1

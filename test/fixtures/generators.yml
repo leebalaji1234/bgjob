@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  userid: 1
+  guid: MyText
+  csvfile: MyText
+  csvcount: MyString
+  processedcount: MyString
+  status: 1
+
+two:
+  userid: 1
+  guid: MyText
+  csvfile: MyText
+  csvcount: MyString
+  processedcount: MyString
+  status: 1

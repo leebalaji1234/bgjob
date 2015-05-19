@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Answer Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Guid</th>
+      <th>Userid</th>
+      <th>Callerid</th>
+      <th>Source</th>
+      <th>Destination</th>
+      <th>Templateid</th>
+      <th>Dialedtime</th>
+      <th>Answeredtime</th>
+      <th>Endtime</th>
+      <th>Dialstatus</th>
+      <th>Reason</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @answer_records.each do |answer_record| %>
+      <tr>
+        <td><%= answer_record.guid %></td>
+        <td><%= answer_record.userid %></td>
+        <td><%= answer_record.callerid %></td>
+        <td><%= answer_record.source %></td>
+        <td><%= answer_record.destination %></td>
+        <td><%= answer_record.templateid %></td>
+        <td><%= answer_record.dialedtime %></td>
+        <td><%= answer_record.answeredtime %></td>
+        <td><%= answer_record.endtime %></td>
+        <td><%= answer_record.dialstatus %></td>
+        <td><%= answer_record.reason %></td>
+        <td><%= link_to 'Show', answer_record %></td>
+        <td><%= link_to 'Edit', edit_answer_record_path(answer_record) %></td>
+        <td><%= link_to 'Destroy', answer_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Answer record', new_answer_record_path %>

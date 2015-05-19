@@ -1,0 +1,29 @@
+<%= form_for(@authenticates_temp) do |f| %>
+  <% if @authenticates_temp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@authenticates_temp.errors.count, "error") %> prohibited this authenticates_temp from being saved:</h2>
+
+      <ul>
+      <% @authenticates_temp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :params %><br>
+    <%= f.text_area :params %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :guid %><br>
+    <%= f.text_area :guid %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

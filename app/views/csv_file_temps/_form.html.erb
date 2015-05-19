@@ -1,0 +1,33 @@
+<%= form_for(@csv_file_temp) do |f| %>
+  <% if @csv_file_temp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@csv_file_temp.errors.count, "error") %> prohibited this csv_file_temp from being saved:</h2>
+
+      <ul>
+      <% @csv_file_temp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :filename %><br>
+    <%= f.text_field :filename %>
+  </div>
+  <div class="field">
+    <%= f.label :flocation %><br>
+    <%= f.text_area :flocation %>
+  </div>
+  <div class="field">
+    <%= f.label :fsize %><br>
+    <%= f.number_field :fsize %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

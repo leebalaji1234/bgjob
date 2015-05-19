@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  guid: MyString
+  userid: 1
+  callerid: MyString
+  source: MyString
+  destination: MyString
+  templateid: 1
+  dialedtime: 1
+  answeredtime: 1
+  endtime: 1
+  dialstatus: MyString
+  reason: MyString
+
+two:
+  guid: MyString
+  userid: 1
+  callerid: MyString
+  source: MyString
+  destination: MyString
+  templateid: 1
+  dialedtime: 1
+  answeredtime: 1
+  endtime: 1
+  dialstatus: MyString
+  reason: MyString

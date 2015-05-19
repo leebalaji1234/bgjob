@@ -1,10 +1,24 @@
+require 'sidekiq/web'
 Rails.application.routes.draw do
-  get 'executer/start'
-
-  get 'executer/stop'
+  resources :generators
+  resources :csv_maps
+  resources :audio_maps
+  resources :call_templates
+  resources :answer_records
+  resources :make_records
+  resources :records
+  resources :csv_files
+  resources :csv_file_temps
+  resources :audio_temps
+  resources :audios
+  resources :optin_services
+  mount Sidekiq::Web => '/sidekiq'
+  resources :request_receivers
+  resources :authenticates_temps
+   
 
   resources :request_receiver_temps
-  resources :basic
+  resources :basic 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

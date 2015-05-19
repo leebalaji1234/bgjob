@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Make Records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Guid</th>
+      <th>Userid</th>
+      <th>Callerid</th>
+      <th>Source</th>
+      <th>Destination</th>
+      <th>Templateid</th>
+      <th>Dialedtime</th>
+      <th>Answeredtime</th>
+      <th>Endtime</th>
+      <th>Dialstatus</th>
+      <th>Reason</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @make_records.each do |make_record| %>
+      <tr>
+        <td><%= make_record.guid %></td>
+        <td><%= make_record.userid %></td>
+        <td><%= make_record.callerid %></td>
+        <td><%= make_record.source %></td>
+        <td><%= make_record.destination %></td>
+        <td><%= make_record.templateid %></td>
+        <td><%= make_record.dialedtime %></td>
+        <td><%= make_record.answeredtime %></td>
+        <td><%= make_record.endtime %></td>
+        <td><%= make_record.dialstatus %></td>
+        <td><%= make_record.reason %></td>
+        <td><%= link_to 'Show', make_record %></td>
+        <td><%= link_to 'Edit', edit_make_record_path(make_record) %></td>
+        <td><%= link_to 'Destroy', make_record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Make record', new_make_record_path %>

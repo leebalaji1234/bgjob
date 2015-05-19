@@ -1,0 +1,37 @@
+<%= form_for(@audio_map) do |f| %>
+  <% if @audio_map.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@audio_map.errors.count, "error") %> prohibited this audio_map from being saved:</h2>
+
+      <ul>
+      <% @audio_map.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :userid %><br>
+    <%= f.number_field :userid %>
+  </div>
+  <div class="field">
+    <%= f.label :audioid %><br>
+    <%= f.number_field :audioid %>
+  </div>
+  <div class="field">
+    <%= f.label :guid %><br>
+    <%= f.text_area :guid %>
+  </div>
+  <div class="field">
+    <%= f.label :cliporder %><br>
+    <%= f.number_field :cliporder %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

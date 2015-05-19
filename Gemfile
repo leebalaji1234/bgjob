@@ -3,10 +3,23 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
-# Use sqlite3 as the database for Active Record
+#----------development area starts here-----------------
 gem 'mysql2'
+# gem "mongoid", "~> 4.0.0"
+
+gem 'sinatra', :require => nil
+
+gem 'responders', '~> 2.0' 
 
 gem 'sidekiq'
+
+# gem 'sidekiq-limit_fetch'
+
+# gem 'curb' # for the purpose of upload file using curl
+# gem install curb
+gem 'curb', '~> 0.8.8'
+
+#----------development area ends here-----------------
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

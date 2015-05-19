@@ -1,0 +1,33 @@
+<%= form_for(@csv_map) do |f| %>
+  <% if @csv_map.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@csv_map.errors.count, "error") %> prohibited this csv_map from being saved:</h2>
+
+      <ul>
+      <% @csv_map.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :userid %><br>
+    <%= f.number_field :userid %>
+  </div>
+  <div class="field">
+    <%= f.label :csvid %><br>
+    <%= f.number_field :csvid %>
+  </div>
+  <div class="field">
+    <%= f.label :guid %><br>
+    <%= f.text_area :guid %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
