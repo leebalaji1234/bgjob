@@ -1,11 +1,12 @@
 class CsvModule
  	include Sidekiq::Worker
  	include WorkerStatus
+ 	include WorkerHelper
 	sidekiq_options :queue => :csvfile, :backtrace => true
 	def perform(tempFile,rguid) 
 		WorkerStatus.setModuleStatus("CsvModule","Working")
 		dirPath = '/home/balaji/csvfiles/'
-		generateFileName = (Time.now.to_i).to_s + ".csv"
+		generateFileName = rand(1000..10000).to_s + (Time.now.to_i).to_s + ".csv"
 		@fileLocation = dirPath+generateFileName 
           
         givingPermission = `echo balaji | sudo -S  chown -R balaji:balaji #{tempFile} && chmod 777 #{tempFile}`
@@ -33,6 +34,8 @@ class CsvModule
 		@CsvMap.save
 		if(@CsvMap.id)
 			WorkerStatus.setModuleStatus("CsvModule","Completed")
+			WorkerHelper.updateGenerator(rguid,'csv')
+			GeneratorModule.perform_async() 
 		end
 		 
 	end 

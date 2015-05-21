@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150517084431) do
+ActiveRecord::Schema.define(version: 20150520172325) do
 
   create_table "answer_records", force: :cascade do |t|
     t.string   "guid",         limit: 255
@@ -103,14 +103,18 @@ ActiveRecord::Schema.define(version: 20150517084431) do
   end
 
   create_table "generators", force: :cascade do |t|
-    t.integer  "userid",         limit: 4
-    t.text     "guid",           limit: 65535
-    t.text     "csvfile",        limit: 65535
-    t.string   "csvcount",       limit: 255
-    t.string   "processedcount", limit: 255
-    t.integer  "status",         limit: 4
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
+    t.integer  "userid",          limit: 4
+    t.text     "guid",            limit: 65535
+    t.text     "csvfile",         limit: 65535
+    t.string   "csvcount",        limit: 255
+    t.string   "processedcount",  limit: 255
+    t.integer  "status",          limit: 4
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "csvstatus",       limit: 4
+    t.integer  "audiostatus",     limit: 4
+    t.text     "audiocollection", limit: 65535
+    t.integer  "templateid",      limit: 4
   end
 
   create_table "make_records", force: :cascade do |t|

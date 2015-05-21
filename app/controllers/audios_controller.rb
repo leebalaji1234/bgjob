@@ -5,6 +5,8 @@ class AudiosController < ActionController::Base
   # GET /audios.json
   def index
     @audios = Audio.all
+     
+
   end
 
   # GET /audios/1

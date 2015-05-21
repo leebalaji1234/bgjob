@@ -11,8 +11,7 @@ class AuthenticationModule
 			     receiver.save
 			     processFile(receiver,receiver.guid)
 			     sendReport(receiver,"Request Processing",101)
-			     initiateGenerator(receiver.guid)
-			     GeneratorModule.perform_async()
+			     initiateGenerator(receiver)
 			 # 	ServiceModule.perform_async() 
 		 end 
 	end
@@ -28,18 +27,20 @@ class AuthenticationModule
 
   end
 
-  def initiateGenerator(rguid)
+  def initiateGenerator(rdata)
          
-	  	@csvDataMap = CsvMap.find_by_guid(rguid)
-	  	@csvData = CsvFile.find(@csvDataMap.csvid) 
-	  	@csvFileName = @csvData.flocation + @csvData.filename
-	  	@csvGetCount = `cat  #{@csvFileName} | wc -l`
+	  	# @csvDataMap = CsvMap.find_by_guid(rguid)
+	  	# @csvData = CsvFile.find(@csvDataMap.csvid) 
+	  	# @csvFileName = @csvData.flocation + @csvData.filename
+	  	# @csvGetCount = `cat  #{@csvFileName} | wc -l`
 	 
 	  	@generator = Generator.new
-	  	@generator.csvfile = @csvFileName
-	  	@generator.csvcount = @csvGetCount
-	  	@generator.processedcount = 1
-	  	@generator.guid = rguid
+	  	# @generator.csvfile = @csvFileName
+	  	# @generator.csvcount = @csvGetCount
+	  	# @generator.processedcount = 1
+	  	arr = JSON.parse(rdata.params) 
+	  	@generator.guid = rdata.guid
+	  	@generator.templateid = arr['templateid']
 	  	@generator.status = 0 
 	  	@generator.save
  

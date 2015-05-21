@@ -2,7 +2,7 @@
 
 <h1>Listing Generators</h1>
 
-<table>
+<table align="center">
   <thead>
     <tr>
       <th>Userid</th>
@@ -11,8 +11,11 @@
       <th>Csvcount</th>
       <th>Processedcount</th>
       <th>Status</th>
-      <th colspan="3"></th>
-    </tr>
+      <th>csvstatus</th>
+      <th>audiostatus</th>
+      <th>audiocollection</th> 
+      <th>actions</th> 
+     </tr>
   </thead>
 
   <tbody>
@@ -24,6 +27,10 @@
         <td><%= generator.csvcount %></td>
         <td><%= generator.processedcount %></td>
         <td><%= generator.status %></td>
+        
+        <td><%= generator.csvstatus %></td> 
+        <td><%= generator.audiostatus %></td> 
+        <td><%= generator.audiocollection %></td> 
         <td><%= link_to 'Show', generator %></td>
         <td><%= link_to 'Edit', edit_generator_path(generator) %></td>
         <td><%= link_to 'Destroy', generator, method: :delete, data: { confirm: 'Are you sure?' } %></td>

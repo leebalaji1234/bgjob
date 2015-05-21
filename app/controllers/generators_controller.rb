@@ -4,7 +4,10 @@ class GeneratorsController < ApplicationController
   # GET /generators
   # GET /generators.json
   def index
-    @generators = Generator.all
+    @generators = Generator.all 
+
+    
+    
   end
 
   # GET /generators/1
