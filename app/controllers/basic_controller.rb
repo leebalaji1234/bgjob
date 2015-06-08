@@ -3,16 +3,16 @@ class BasicController < ActionController::Base
        def index 
         keyParams = :atvc1
         keyParams = (keyParams.to_s).gsub(/[t]/, 'o')
-         raise keyParams.inspect
-            getdata  = RequestReceiverTemp.find(25)
-            dd  = getdata.params
-            dd1  = eval(dd)
-            dd1.each do |k2,v2|
-                if (/atvc[0-9]/.match(k2) ) 
-                 raise  Base64.decode64(dd1[k2]).inspect
-              end
-            end
-            raise Base64.decode64(dd1['vc1']).inspect
+         # raise keyParams.inspect
+            # getdata  = RequestReceiverTemp.find(25)
+            # dd  = getdata.params
+            # dd1  = eval(dd)
+            # dd1.each do |k2,v2|
+            #     if (/atvc[0-9]/.match(k2) ) 
+            #      # raise  Base64.decode64(dd1[k2]).inspect
+            #   end
+            # end
+            # # raise Base64.decode64(dd1['vc1']).inspect
             @GatewayParams = filer_params     
             @tempParams = RequestReceiverTemp.new
             @tempParams.params = @GatewayParams.to_s
@@ -25,7 +25,7 @@ class BasicController < ActionController::Base
             objResponse['guid'] = @tempParams.guid 
             objResponse = objResponse.to_json 
 
- File.open('/home/balaji/testoutput.html', "w:ASCII-8BIT") { |f| f.write(@GatewayParams.to_s)}
+ # File.open('/home/balaji/testoutput.html', "w:ASCII-8BIT") { |f| f.write(@GatewayParams.to_s)}
              # ParamsFilterModule.perform_async() 
             render :json => objResponse
             

@@ -6,7 +6,7 @@ class AudioModule
 	def perform(tempFile,rguid,corder)
 		WorkerStatus.setModuleStatus("AudioModule","Working")
 		dirPath = '/home/balaji/bgfiles/'
-		dirPath_new = '/home/balaji/bgfiles/converted'
+		dirPath_new = '/home/balaji/bgfiles/converted/'
 
 		generateFileName = rand(10..1000).to_s + (Time.now.to_i).to_s + ".wav"
 		@fileLocation = dirPath+generateFileName 
